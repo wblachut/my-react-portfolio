@@ -1,0 +1,130 @@
+.portfolio {
+  background-color: rgb(167, 167, 167);
+  flex: 3;
+  flex-wrap: wrap;
+  transition: flex .9s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+  transition: flex .7s cubic-bezier(0.28, -0.46, 0.95, 0.98);
+  overflow: hidden;
+}
+
+.portfolio.hidden {
+  flex: 0;
+}
+
+.portfolio-title {
+  font-size: 1rem;
+  font-family: source-code-pro, Menlo, monospace;
+  color: rgba(184, 184, 184, 0.9);
+}
+
+.portfolio-wrapper {
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 30px;
+  padding: 20px 20px 0px 20px;
+}
+
+.repo-container {
+  /* background-color: slategray; */
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 250px;
+  position: relative;
+}
+
+.repo-img {
+  position: relative;
+  background-color: rgb(49, 49, 49);
+  border: 4px solid rgb(49, 49, 49);
+  border-radius: 8px;
+  height: 160px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.repo-name {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  background-color: rgb(49, 49, 49);
+  color: rgb(156, 156, 156);
+  font-size: .9rem;
+  align-items: center;
+  display: flex;
+}
+
+.gh-icon,
+.link-icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: rgb(92, 92, 92);
+  color: rgb(185, 185, 185);
+  box-shadow: 0px 0px 5px rgb(0, 0, 0), inset 0px 0px 2px rgb(0, 0, 0);
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 1.5s;
+  z-index: 2;
+}
+
+.link-icon {
+  left: 5px;
+  border: none;
+  box-shadow: none;
+}
+
+.gh-icon:hover,
+.link-icon:hover {
+  transform: scale(1.04);
+  color: rgb(222, 240, 245);
+}
+
+.repo-container:hover .gh-icon,
+.repo-container:hover .link-icon {
+  opacity: 1;
+}
+
+.repo-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.repo-gif {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.icon-skills {
+  display: inline-flex;
+  margin-bottom: 5px !important;
+}
+
+.icon-skills li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
+  color: rgb(49, 49, 49);
+  color: rgb(255, 255, 255);
+}
+
+.icon-skills li p {
+  font-size: 0.9rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+.icon-skills img {
+  width: 24px;
+  margin: 0px;
+}
