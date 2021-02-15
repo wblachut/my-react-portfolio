@@ -29,7 +29,7 @@ Feel free to leave some comments. If you like the design I invite you to come ba
 ## Some concepts to apply in future:
 
 - [ ] create a page for skiing and being ski instructor
-- [ ] create a page about other hobbies, and `about`
+- [ ] create a page about other hobbies, and About
 - [ ] add an animated mind map of my skills
 - [ ] add mouse effects while hovering over links on main page
 - handling fetch with react hook eg. `useAsync`
