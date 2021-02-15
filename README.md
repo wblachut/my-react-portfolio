@@ -2,9 +2,9 @@
 
 [Open Portfolio](https://wblachut.github.io/my-react-portfolio/)
 
-###
+##
 
-### ...work in progress!
+## work in progress...
 
 In future this project will become personal web-site containing pages with information about my work, hobbies and portfolio. It is on it's early stage, consisting only portfolio at the moment.
 
