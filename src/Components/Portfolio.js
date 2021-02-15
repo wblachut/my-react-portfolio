@@ -10,8 +10,6 @@ class Portfolio extends React.Component {
 			isLoading: false,
 			myRepos: [],
 		};
-		// static styleShown =
-		// 	static styleHidden =
 	}
 
 	getStyle() {
@@ -34,7 +32,7 @@ class Portfolio extends React.Component {
 		console.log(repoData);
 		const repositories = repoData
 			.sort((a, b) => (a.id > b.id ? 1 : -1))
-			.slice(-12)
+			.slice(1, 13)
 			.reverse();
 		this.setState({ myRepos: repositories });
 	}
@@ -47,7 +45,7 @@ class Portfolio extends React.Component {
 					{this.state.myRepos.map((repo) => {
 						return (
 							<div className="repo-container" key={repo.id}>
-								<div className="repo-img">
+								<div className="repo-img-div">
 									<img
 										src={
 											process.env.PUBLIC_URL + `/images/${repo.name}_img.png`
@@ -70,7 +68,14 @@ class Portfolio extends React.Component {
 											className="link-icon"
 										/>
 									</a>
-									<div className="repo-gif">
+									<div className="repo-gif-div">
+										<img
+											src={
+												process.env.PUBLIC_URL + `/images/${repo.name}_gif.gif`
+											}
+											alt="repo-gif"
+											className="repo-gif"
+										/>
 										<div className="repo-name">{repo.name}</div>
 									</div>
 								</div>

@@ -17,17 +17,10 @@ const Personals = () => {
 				</code>
 				<code>portfolio</code>
 			</p>
-			{/* <p>Sailor </p> */}
 			<p>traveler </p>
 			<p>freeride skier</p>
 			<p className="web-dev" role="button" onClick={onToggleHidden}>
-				<code>
-					webDeveloper &lt;/&gt;
-					{/* <FontAwesomeIcon
-						icon={['fas', 'code']}
-						className="fa-main-icon"
-					/>{' '} */}
-				</code>
+				<code>webDeveloper &lt;/&gt;</code>
 			</p>
 			<ul className="icons-main">
 				<li>
