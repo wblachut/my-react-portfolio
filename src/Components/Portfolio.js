@@ -40,7 +40,6 @@ class Portfolio extends React.Component {
 	render() {
 		return (
 			<div className="portfolio hidden" styles={this.getStyle()}>
-				{/* <h2 className="portfolio-title">My portfolio</h2> */}
 				<div className="portfolio-wrapper">
 					{this.state.myRepos.map((repo) => {
 						return (
@@ -59,10 +58,7 @@ class Portfolio extends React.Component {
 											className="gh-icon"
 										/>
 									</a>
-									<a
-										href={`https://wblachut.github.io/${repo.name}/`}
-										className="demo-link"
-									>
+									<a href={`${repo.homepage}`} className="demo-link">
 										<FontAwesomeIcon
 											icon={['fas', 'link']}
 											className="link-icon"
@@ -76,7 +72,7 @@ class Portfolio extends React.Component {
 											alt="repo-gif"
 											className="repo-gif"
 										/>
-										<div className="repo-name">{repo.name}</div>
+										<div className="repo-name">{repo.description}</div>
 									</div>
 								</div>
 							</div>
