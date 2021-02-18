@@ -9,8 +9,17 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .show-icon {
+    animation: show-arrow-animation infinite 2s ease-in-out;
+  }
+  .toggle-projects:hover .show-icon {
+    animation: none;
+  }
+  .toggle-projects.hide {
+    animation: hide-arrow-animation infinite 1.5s linear;
+  }
+  .web-dev:hover {
+    animation: glow 2s linear infinite;
   }
 }
 
@@ -28,6 +37,7 @@
   transition: transform 0.5s;
   position: relative;
   cursor: default;
+  overflow: hidden;
 }
 
 .personals p,
@@ -37,9 +47,16 @@ ul.icons-main a,
   margin: 5px;
 }
 
+.personals p, .portfolio-txt {
+  transition: all .9s ease-in;
+}
+
 .wb-title {
   margin-bottom: 50px !important;
   margin-top: 30px !important;
+  cursor: pointer;
+  display: inline;
+  overflow: hidden;
 }
 
 .personals b {
@@ -48,7 +65,6 @@ ul.icons-main a,
 
 .web-dev {
   cursor: pointer;
-  cursor: url(https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2013/png/iconmonstr-code-2.png&r=255&g=255&b=255), pointer;
 }
 
 ul {
@@ -74,18 +90,20 @@ ul.icons-main a:active {
 .toggle-projects {
   cursor: pointer;
   position: absolute;
-  width: 30px;
+  width: 4vw;
+  height: 4vh;
   right: 20px;
-  top: 10px
+  top: 2%;
 }
 
 .toggle-icon-wrapper {
   position: relative;
-  width: 50px;
+  width: 65px;
 }
 
-.show-icon, .hide-icon {
-  transition: opacity 1.4s ease-in-out;
+.show-icon,
+.hide-icon {
+  transition: opacity 1.8s ease-in-out;
   position: absolute;
 }
 
@@ -102,7 +120,6 @@ ul.icons-main a:active {
 .toggle-projects.hide .show-icon {
   opacity: 0;
   visibility: hidden;
-
 }
 
 .toggle-projects.hide .hide-icon {
@@ -110,14 +127,26 @@ ul.icons-main a:active {
   visibility: visible;
 }
 
-
-
-
-@keyframes App-logo-spin {
+@keyframes show-arrow-animation {
   from {
-    transform: rotate(0deg);
+    transform: translateX(0%);
+    opacity: 1;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(-300%);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0%,
+  1000% {
+    transform: scale(1.005);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.8);
+    transform: scale(1.025);
   }
 }

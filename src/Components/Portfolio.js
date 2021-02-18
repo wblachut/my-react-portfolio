@@ -59,21 +59,22 @@ class Portfolio extends React.Component {
 										/>
 									</a>
 									<a href={`${repo.homepage}`} className="demo-link">
-										<FontAwesomeIcon
+										{/* <FontAwesomeIcon
 											icon={['fas', 'link']}
 											className="link-icon"
-										/>
+										/> */}
+										<div className="repo-gif-div">
+											<img
+												src={
+													process.env.PUBLIC_URL +
+													`/images/${repo.name}_gif.gif`
+												}
+												alt="repo-gif"
+												className="repo-gif"
+											/>
+										</div>
 									</a>
-									<div className="repo-gif-div">
-										<img
-											src={
-												process.env.PUBLIC_URL + `/images/${repo.name}_gif.gif`
-											}
-											alt="repo-gif"
-											className="repo-gif"
-										/>
-										<div className="repo-name">{repo.description}</div>
-									</div>
+									<div className="repo-name">{repo.description}</div>
 								</div>
 							</div>
 						);

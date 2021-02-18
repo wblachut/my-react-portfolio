@@ -5,17 +5,18 @@ import PropTypes from 'prop-types';
 const Personals = () => {
 	const onToggleHidden = () => {
 		// props.setHidden(!props.isHidden);
+		document.querySelector('.personals').classList.toggle('small');
 		document.querySelector('.portfolio').classList.toggle('hidden');
 		document.querySelector('.toggle-projects').classList.toggle('hide');
 	};
 
 	return (
 		<section className="personals">
-			<p className="wb-title">
+			<p className="wb-title" onClick={onToggleHidden}>
 				<code>
-					<b>WB </b>
+					<b className="wb-bold">WB </b>
 				</code>
-				<code>portfolio</code>
+				<code className="portfolio-txt">portfolio</code>
 			</p>
 			<p>traveler </p>
 			<p>freeride skier</p>

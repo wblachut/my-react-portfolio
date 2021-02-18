@@ -2,8 +2,7 @@
   background-color: rgb(167, 167, 167);
   flex: 3;
   flex-wrap: wrap;
-  /* transition: flex .9s cubic-bezier(0.61,-0.19, 0.7,-0.11); */
-  transition: flex .7s cubic-bezier(0.28, -0.46, 0.95, 0.98);
+  transition: flex 0.7s cubic-bezier(0.28, -0.46, 0.95, 0.98);
   overflow: hidden;
 }
 
@@ -27,11 +26,12 @@
 }
 
 .repo-container {
-  /* background-color: slategray; */
   display: flex;
   justify-content: center;
   justify-items: center;
   width: 250px;
+  width: 16vw;
+  height: 16%;
   position: relative;
 }
 
@@ -40,7 +40,7 @@
   background-color: rgb(49, 49, 49);
   border: 4px solid rgb(49, 49, 49);
   border-radius: 8px;
-  height: 160px;
+  height: 10vw;
   width: 100%;
   overflow: hidden;
 }
@@ -53,7 +53,7 @@
   justify-content: center;
   background-color: rgb(49, 49, 49);
   color: rgb(156, 156, 156);
-  font-size: .9rem;
+  font-size: 50%;
   align-items: center;
   display: flex;
 }
@@ -89,7 +89,8 @@
   opacity: 1;
 }
 
-.repo-image, .repo-gif {
+.repo-image,
+.repo-gif {
   width: 100%;
   overflow: hidden;
 }
@@ -135,4 +136,67 @@
 .icon-skills img {
   width: 24px;
   margin: 0px;
+}
+
+@media (max-width: 1050px) {
+  .toggle-projects {
+    right: 50px;
+  }
+
+  .portfolio-wrapper {
+    height: 70%;
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px 20px 0px 20px;
+  }
+
+  .repo-container {
+    width: 18vw;
+    height: 10vw;
+  }
+
+  .repo-name {
+    font-size: 30%;
+  }
+
+  .icon-skills {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .personals.small p:nth-child(n+2) {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  .personals.small .portfolio-txt {
+    transform: scale(0);
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .toggle-projects {
+    right: 50px;
+  }
+
+  .portfolio {
+    flex: 8;
+  }
+
+  .portfolio-wrapper {
+    height: 90%;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .repo-container {
+    width: 30vw;
+    height: 20vw;
+  }
+  .repo-img-div {
+    height: 20vw;
+  }
 }
