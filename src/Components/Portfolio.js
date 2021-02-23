@@ -12,24 +12,9 @@ class Portfolio extends React.Component {
 		};
 	}
 
-	getStyle() {
-		// eslint-disable-next-line react/prop-types
-		this.props.isHidden
-			? {
-					display: 'flex',
-					flex: '3',
-			  }
-			: {
-					display: 'none',
-					flex: '0',
-			  };
-		// this.props.isHidden ? this.styleHidden : this.styleShown;
-	}
-
 	async componentDidMount() {
 		const data = await fetch('https://api.github.com/users/wblachut/repos');
 		const repoData = await data.json();
-		console.log(repoData);
 		const repositories = repoData
 			.sort((a, b) => (a.id > b.id ? 1 : -1))
 			.slice(1, 13)
@@ -39,7 +24,7 @@ class Portfolio extends React.Component {
 
 	render() {
 		return (
-			<div className="portfolio hidden" styles={this.getStyle()}>
+			<div className="portfolio hidden">
 				<div className="portfolio-wrapper">
 					{this.state.myRepos.map((repo) => {
 						return (
@@ -59,10 +44,6 @@ class Portfolio extends React.Component {
 										/>
 									</a>
 									<a href={`${repo.homepage}`} className="demo-link">
-										{/* <FontAwesomeIcon
-											icon={['fas', 'link']}
-											className="link-icon"
-										/> */}
 										<div className="repo-gif-div">
 											<img
 												src={
@@ -80,7 +61,6 @@ class Portfolio extends React.Component {
 						);
 					})}
 				</div>
-				{/* <div className="icons-skills-wrapper"> */}
 				<ul className="icon-skills">
 					<li>
 						<FontAwesomeIcon
@@ -109,7 +89,6 @@ class Portfolio extends React.Component {
 						<p>VS Code</p>
 					</li>
 				</ul>
-				{/* </div> */}
 			</div>
 		);
 	}

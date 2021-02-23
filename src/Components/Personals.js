@@ -1,10 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import PropTypes from 'prop-types';
 
 const Personals = () => {
 	const onToggleHidden = () => {
-		// props.setHidden(!props.isHidden);
 		document.querySelector('.personals').classList.toggle('small');
 		document.querySelector('.portfolio').classList.toggle('hidden');
 		document.querySelector('.toggle-projects').classList.toggle('hide');
@@ -99,8 +97,3 @@ const Personals = () => {
 };
 
 export default Personals;
-
-Personals.propTypes = {
-	isHidden: PropTypes.bool,
-	setHidden: PropTypes.func,
-};
