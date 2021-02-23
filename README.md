@@ -4,12 +4,13 @@
 
 ## work in progress...
 
-In future this project will become personal web-site containing pages with information about my work, hobbies and portfolio. It is on it's early stage, consisting only portfolio at the moment.
+In the future this project will become a personal web-site containing pages with information about my work, hobbies and portfolio. It is on it's early stage, consisting only portfolio at the moment.
 
 ## Description
 
-On the page load personal information is displayed. I tried to make it simple and minimalistic. To show the portfolio click on the `webDeveloper` paragraph or on the `icon` in the left-top corner. The portfolio consists of 12 github `repositories`. Each of them is represented by the miniature images of the **demo page**. Hovering over them will cause gif and two icons to appear. The first one is a link to **project's demo page** the second one will take you to **project's github repository**.
+For now I tried to make this webpage simple and minimalistic. To show the portfolio click on the `WB portfolio`, `webDeveloper` paragraph or on the `arrow icon` in the left-top corner. The portfolio consists of 12 github `repositories`. Each of them is represented by the miniature images of the **demo page**. Hovering over them will cause gif animation. Clicking on a repo will direct you to **it's demo page** while clicking the github icon will take you obviously to **project's github repository**.
 
+Early stage gif bellow:
 ![](public/images/my-react-portfolio_gif.gif)
 
 The page was build as [React App](https://reactjs.org/).
@@ -28,8 +29,9 @@ Feel free to leave some comments. If you like the design I invite you to come ba
 ## Some concepts to apply in future:
 
 - [ ] create a page for skiing and being ski instructor
-- [ ] create a page about other hobbies, and About
+- [ ] create a page about other hobbies, and About ME
 - [ ] add an animated mind map of my skills
+- [ ] make text appearing on page destructible
 - [ ] add mouse effects while hovering over links on main page
 - handling fetch with react hook eg. `useAsync`
 - make main page more exciting but keeping still simple
